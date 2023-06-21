@@ -20,8 +20,6 @@ import java.util.Map;
 @Slf4j
 public class ReactController {
 
-
-
     @GetMapping(value = "/first")
     public ResponseVO first(){
         log.info("initCall");
