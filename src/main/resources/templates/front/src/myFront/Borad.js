@@ -19,10 +19,9 @@ export default function Borad (){
             .then(data=>{
                 console.log(data);
             })
-    }, [])
-    const onclick=()=>{
-        console.log("onclick", sendData)
+    }, []);
 
+    const onclick=()=>{
         fetch("/text",{
             method: "POST",
             headers:{
@@ -34,19 +33,17 @@ export default function Borad (){
             .then(data=>{
                 console.log(data);
             })
-
-        console.log(sendData)
     }
-
+    //spread 문법
     const inputText=(e)=>{
         setSendData({
-            ...sendData,                    //spread 문법 기존에 있는 값들을 가져온다.
-            [e.target.name]:e.target.value  // 해당 배열의 값은 변경해준다.
+            ...sendData,
+            [e.target.name]:e.target.value //[key]: 변경할 내용
         });
     }
     return(
         <>
-            <input name="text" onChange={inputText}/>
+            <input name="text" value={sendData.text} onChange={inputText}/>
             <button type={"button"} className={"btn btn-primary"} onClick={onclick}>Default</button>
         </>
     )
