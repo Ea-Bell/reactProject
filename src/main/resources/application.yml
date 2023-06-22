@@ -1,2 +1,22 @@
 server:
   port: 8080
+
+
+# Database config
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://192.168.10.125:3306/news
+    username: root
+    password: mariadb
+
+  jpa:
+    show-sql: true
+    database: mysql
+    properties:
+      hibernate:
+        format_sql: true
+logging:
+  level:
+    root: info
+
