@@ -5,7 +5,7 @@ import App from './App';
 import './myFront/Borad'
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
-import Borad from "./myFront/Borad";
+import Borad from "./MyBoard/Borad";
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
